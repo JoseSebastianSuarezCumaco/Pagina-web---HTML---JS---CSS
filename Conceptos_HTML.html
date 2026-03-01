@@ -1,0 +1,188 @@
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SENA Presentation</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(120deg,#0f172a,#1e293b);
+    color:white;
+    display:flex;
+    height:100vh;
+}
+.menu{
+    width:280px;
+    background:#065f46;
+    padding-top:25px;
+    box-shadow:4px 0 15px rgba(0,0,0,.5);
+}
+.menu h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+.menu button{
+    display:block;
+    width:85%;
+    margin:12px auto;
+    padding:14px;
+    border:none;
+    background:#10b981;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    text-align:left;
+    transition:.25s;
+}
+.menu button:hover{
+    background:#34d399;
+    transform:translateX(10px);
+}
+.panel{
+    flex:1;
+    padding:50px;
+    overflow:auto;
+}
+.tarjeta{
+    background:#1e293b;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 15px 35px rgba(0,0,0,.6);
+    animation:aparecer .4s ease;
+}
+@keyframes aparecer{
+    from{opacity:0; transform:translateY(25px);}
+    to{opacity:1; transform:translateY(0);}
+}
+h1{ color:#34d399; }
+p, ul{
+    line-height:1.7;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+    <h2>ADSO SENA</h2>
+
+<button onclick="mostrar('presentacion')">📘 Presentation</button>
+<button onclick="mostrar('justificacion')">📊 Justification</button>
+<button onclick="mostrar('competencias')">🧠 Competencies</button>
+<button onclick="mostrar('perfilDeIngreso')">👨‍💻 Admission Profile</button>
+<button onclick="mostrar('perfilEgreso')">👨‍💻 Graduation Profile</button>
+<button onclick="mostrar('estrategia')">👨 Training Strategy</button>
+</div>
+
+<div class="panel">
+    <div class="tarjeta">
+        <h1 id="titulo">Welcome</h1>
+        <div id="contenido">
+            Select a topic from the left menu to view the slide.
+        </div>
+    </div>
+</div>
+
+<script>
+
+const diapositivas = {
+
+presentacion: `
+<p>
+The technological training program in Software Analysis and Development is focused on developing skills related to the activities inherent in the process of creating computer applications, according to functional and technical requirements for a business solution. It establishes individual and teamwork methods, strengthening ethical, professional, and personal values for the benefit of society and the country's competitiveness.
+</p>
+<p>
+As it is a program within the Information and Communications Technology sector, it has high relevance and demand in the country's business sector, since software and IT services are considered one of the world-class industries.
+</p>
+`,
+
+justificacion: `
+<p>
+The flow of new technologies is reaching the country at an unprecedented pace, causing internal demand and expectations for new products and services to transform just as rapidly. In this way, the outlook of the ICT industry in less developed countries must begin with positioning the national supply along the axis defined by the tensions between the global market and the local market, which operate as two poles on the issue. This means identifying priority technological focus areas both nationally and internationally, based on the sector’s strengths and weaknesses, in order to establish the target market. Considering that these evolve and transform continuously and rapidly, human talent in Colombia trained in IT areas becomes the determining factor in facing the short-, medium-, and long-term challenges.
+</p>
+
+<p>
+Internationally, interest in Colombia’s Industry 4.0 services (BPO, Software, Health, Audiovisual and Digital Content, Graphic and Editorial Communication) continues to expand at an accelerated pace. In 2018, these exports reached US$407.5 million, representing a 33% increase. By sector, Software sales led with US$159.7 million, followed by BPO with US$103.9 million, Audiovisual and Digital Content with US$82.8 million, Health with US$57.4 million, and Graphic and Editorial Communication with US$3.5 million.
+</p>
+
+<p>
+The number of technology professionals demanded by Colombian companies is much higher than the number of professionals available in the country, according to data from the Ministry of Information and Communications Technologies (MinTIC). The shortage of professionals in this area was expected to reach nearly 70,000 by the end of 2019. Given the projections, after 2019 the shortage of human talent trained in IT areas will continue to grow and cannot be easily resolved. Therefore, the Government of Colombia must adopt measures to overcome this deficit.
+</p>
+
+<p>
+Due to the current and future need for training personnel in technologies related to the ICT sector, training programs must be offered to strengthen capacities in customized development, programming, algorithms, databases, and networks (Client-Server Architecture); applied integration of areas; software testing and adaptation to different markets and sectors; cloud management and production technologies; digital security or cybersecurity technologies; production, management, and manipulation of digital content on networks and virtual platforms (fixed, mobile, and convergent); big data, blockchain, IoT, machine learning; software development methodologies; generation, production, and exploitation of cloud software; as well as strengthening knowledge in areas such as Project Management and reinforcing soft skills such as communication, teamwork, client interaction, and Business English.
+</p>
+
+<p>
+These required training fields are being demanded by the productive sector and generate potential job performance opportunities, forming the basis for curriculum design related to ICT sector technologies and the knowledge network in Computing, Design, and Software Development, supporting its growth. SENA offers the Technologist program in Software Analysis and Development with comprehensive professional, social, technological, and cultural training elements. As differentiating factors, it provides methodologies and platforms for quality software development, access to cutting-edge technologies, and a structure focused more on methods than on content, promoting the training of free-thinking citizens with critical, cooperative, and entrepreneurial abilities, making it consistent with its mission and permanently innovating according to technological trends and changes, as well as the needs of the business sector and workers, positively impacting productivity, competitiveness, equity, and development.
+</p>
+`,
+
+competencias: `
+<ul>
+<li>Establish software requirements</li>
+<li>Evaluate technical requirements</li>
+<li>Design IT solutions</li>
+<li>Develop applications</li>
+<li>Implement systems</li>
+<li>Control software quality</li>
+</ul>
+`,
+
+perfilDeIngreso: `
+<p>Requirements to enter the program:</p>
+<ul>
+<li>Academic: 11th grade completed</li>
+<li>Pass aptitude, motivation, interest, and minimum entry competency tests</li>
+</ul>
+`,
+
+perfilEgreso: `
+<ul>
+<li>Information Technology Technician</li>
+<li>Application software coder</li>
+</ul>
+`,
+
+estrategia: `
+<p>
+Centered on building autonomy to ensure the quality of training within a competency-based framework, project-based learning, and the use of active teaching techniques that stimulate thinking for solving simulated and real problems. It is supported by the use of information and communication technologies integrated into open and multi-technological environments that recreate the productive context and connect the learner with everyday reality and competency development.
+</p>
+<p>
+Likewise, it must continuously stimulate the learner’s self-criticism and reflection on their work and learning outcomes achieved through the active integration of four sources of information for knowledge construction:
+</p>
+<ul>
+<li>Instructor - tutor</li>
+<li>The environment</li>
+<li>ICT</li>
+<li>Collaborative work</li>
+</ul>
+`
+};
+
+function mostrar(seccion){
+    const titulo = document.getElementById("titulo");
+    const contenido = document.getElementById("contenido");
+
+    if(seccion === "presentacion") titulo.innerText="Presentation";
+    if(seccion === "justificacion") titulo.innerText="Justification";
+    if(seccion === "competencias") titulo.innerText="Competencies";
+    if(seccion === "perfilDeIngreso") titulo.innerText="Admission Profile";
+    if(seccion === "perfilEgreso") titulo.innerText="Graduation Profile";
+    if(seccion === "estrategia") titulo.innerText="Training Strategy";    
+
+    contenido.innerHTML = diapositivas[seccion];
+}
+
+</script>
+
+</body>
+</html>
+```
