@@ -1,32 +1,925 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>SENA Presentation</title>
-
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Blog Educativo - Etiquetas HTML</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<div class="menu">
-    <h2>ADSO SENA</h2>
 
-    <button onclick="mostrar('presentacion')">📘 Presentation</button>
-    <button onclick="mostrar('justificacion')">📊 Justification</button>
-    <button onclick="mostrar('competencias')">🧠 Competencies</button>
-    <button onclick="mostrar('perfilDeIngreso')">👨‍💻 Admission Profile</button>
-    <button onclick="mostrar('perfilEgreso')">👨‍💻 Graduation Profile</button>
-    <button onclick="mostrar('estrategia')">👨 Training Strategy</button>
+<header>
+    <h1>Blog Educativo de Etiquetas HTML</h1>
+    <p>Explicacion detallada de etiquetas organizadas por categorias</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="mostrarSeccion('estructurales')">Estructurales</a></li>
+        <li><a href="#" onclick="mostrarSeccion('texto')">Texto</a></li>
+        <li><a href="#" onclick="mostrarSeccion('listas')">Listas</a></li>
+        <li><a href="#" onclick="mostrarSeccion('formularios')">Formularios</a></li>
+        <li><a href="#" onclick="mostrarSeccion('tablas')">Tablas</a></li>
+        <li><a href="#" onclick="mostrarSeccion('multimedia')">Multimedia</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ================= ESTRUCTURALES ================= -->
+<section id="estructurales" class="contenido">
+
+<h2>Etiquetas Estructurales</h2>
+
+<p>
+Las etiquetas estructurales permiten organizar una pagina web de forma semantica.
+Estas etiquetas indican que tipo de contenido contiene cada parte del documento.
+Se escriben entre simbolos menor y mayor que (&lt; &gt;).
+La mayoria tienen etiqueta de apertura y etiqueta de cierre.
+</p>
+
+<!-- HEADER -->
+<article>
+<h3>&lt;header&gt;</h3>
+
+<p><strong>Definicion:</strong> Representa la cabecera de una pagina o de una seccion.</p>
+
+<p><strong>Apertura y cierre:</strong> 
+Se abre con &lt;header&gt; y se cierra con &lt;/header&gt;.</p>
+
+<p><strong>Para que sirve:</strong> Contiene titulos, logos o menus principales.</p>
+
+<p><strong>Sintaxis basica:</strong></p>
+<pre>
+&lt;header&gt;
+   &lt;h1&gt;Titulo&lt;/h1&gt;
+&lt;/header&gt;
+</pre>
+
+<p><strong>Ejemplo funcional:</strong></p>
+<div style="border:1px solid gray; padding:10px;">
+<header>Ejemplo de cabecera</header>
 </div>
 
-<div class="panel">
-    <div class="tarjeta">
-        <h1 id="titulo">Welcome</h1>
-        <div id="contenido">
-            Select a topic from the left menu to view the slide.
-        </div>
-    </div>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> No usar multiples header sin sentido.
+Debe contener informacion introductoria.</p>
+</article>
+
+<!-- NAV -->
+<article>
+<h3>&lt;nav&gt;</h3>
+
+<p><strong>Definicion:</strong> Define un bloque de navegacion.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;nav&gt; ... &lt;/nav&gt;</p>
+
+<p><strong>Para que sirve:</strong> Contiene enlaces internos o externos.</p>
+
+<pre>
+&lt;nav&gt;
+  &lt;a href="#"&gt;Inicio&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+
+<div style="border:1px solid gray; padding:10px;">
+Inicio | Contacto | Ayuda
 </div>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar listas &lt;ul&gt; para organizar enlaces.</p>
+</article>
+
+<!-- MAIN -->
+<article>
+<h3>&lt;main&gt;</h3>
+
+<p><strong>Definicion:</strong> Representa el contenido principal del documento.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;main&gt; ... &lt;/main&gt;</p>
+
+<p><strong>Para que sirve:</strong> Contiene la informacion mas importante de la pagina.</p>
+
+<pre>
+&lt;main&gt;
+  Contenido principal
+&lt;/main&gt;
+</pre>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Solo debe existir un &lt;main&gt; por pagina.</p>
+</article>
+
+<!-- SECTION -->
+<article>
+<h3>&lt;section&gt;</h3>
+
+<p><strong>Definicion:</strong> Agrupa contenido relacionado tematicamente.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;section&gt; ... &lt;/section&gt;</p>
+
+<pre>
+&lt;section&gt;
+   &lt;h2&gt;Titulo&lt;/h2&gt;
+&lt;/section&gt;
+</pre>
+
+<section style="border:1px solid gray; padding:10px;">
+Ejemplo de section
+</section>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Cada section debe tener un encabezado.</p>
+</article>
+
+<!-- ARTICLE -->
+<article>
+<h3>&lt;article&gt;</h3>
+
+<p><strong>Definicion:</strong> Representa contenido independiente.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;article&gt; ... &lt;/article&gt;</p>
+
+<p><strong>Para que sirve:</strong> Usado en blogs, noticias o publicaciones.</p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Debe poder leerse de forma independiente.</p>
+</article>
+
+<!-- ASIDE -->
+<article>
+<h3>&lt;aside&gt;</h3>
+
+<p><strong>Definicion:</strong> Contenido secundario o complementario.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;aside&gt; ... &lt;/aside&gt;</p>
+
+<aside style="border:1px solid gray; padding:10px;">
+Contenido adicional
+</aside>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> No debe contener el contenido principal.</p>
+</article>
+
+<!-- FOOTER -->
+<article>
+<h3>&lt;footer&gt;</h3>
+
+<p><strong>Definicion:</strong> Define el pie de pagina o seccion.</p>
+
+<p><strong>Apertura y cierre:</strong>
+&lt;footer&gt; ... &lt;/footer&gt;</p>
+
+<footer style="border:1px solid gray; padding:10px;">
+Pie de ejemplo
+</footer>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Puede contener informacion de contacto o derechos.</p>
+</article>
+
+</section>
+
+<!-- ================= TEXTO ================= -->
+
+<section id="texto" class="contenido">
+
+<h2>Texto y Contenido</h2>
+
+<p>
+Las etiquetas de texto permiten estructurar la informacion escrita dentro de una pagina web.
+Sirven para organizar titulos, parrafos, enfasis y separaciones visuales.
+La mayoria tienen apertura y cierre.
+</p>
+
+<!-- H1 -->
+<article>
+<h3>&lt;h1&gt;</h3>
+
+<p><strong>Definicion:</strong> Representa el encabezado mas importante de la pagina.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;h1&gt; ... &lt;/h1&gt;</p>
+
+<p><strong>Para que sirve:</strong> Se usa para el titulo principal del contenido.</p>
+
+<pre>
+&lt;h1&gt;Titulo Principal&lt;/h1&gt;
+</pre>
+
+<h1 style="border:1px solid gray;">Ejemplo de h1</h1>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Solo debe existir un h1 principal por pagina.</p>
+</article>
+
+<!-- H2 -->
+<article>
+<h3>&lt;h2&gt;</h3>
+
+<p><strong>Definicion:</strong> Subtitulo de segundo nivel.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;h2&gt; ... &lt;/h2&gt;</p>
+
+<pre>
+&lt;h2&gt;Subtitulo&lt;/h2&gt;
+</pre>
+
+<h2 style="border:1px solid gray;">Ejemplo de h2</h2>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Debe respetar la jerarquia de encabezados.</p>
+</article>
+
+<!-- P -->
+<article>
+<h3>&lt;p&gt;</h3>
+
+<p><strong>Definicion:</strong> Define un parrafo de texto.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;p&gt; ... &lt;/p&gt;</p>
+
+<pre>
+&lt;p&gt;Este es un parrafo&lt;/p&gt;
+</pre>
+
+<p style="border:1px solid gray;">Ejemplo de parrafo</p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> No usar br repetidamente para separar texto.</p>
+</article>
+
+<!-- SPAN -->
+<article>
+<h3>&lt;span&gt;</h3>
+
+<p><strong>Definicion:</strong> Contenedor en linea sin significado semantico.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;span&gt; ... &lt;/span&gt;</p>
+
+<pre>
+&lt;span&gt;Texto resaltado&lt;/span&gt;
+</pre>
+
+<p>Ejemplo: <span style="color:red;">Texto en rojo</span></p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar para aplicar estilos con CSS.</p>
+</article>
+
+<!-- STRONG -->
+<article>
+<h3>&lt;strong&gt;</h3>
+
+<p><strong>Definicion:</strong> Indica importancia fuerte en el texto.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;strong&gt; ... &lt;/strong&gt;</p>
+
+<pre>
+&lt;strong&gt;Importante&lt;/strong&gt;
+</pre>
+
+<p><strong>Ejemplo funcional:</strong> <strong>Texto importante</strong></p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar para relevancia semantica, no solo estilo.</p>
+</article>
+
+<!-- EM -->
+<article>
+<h3>&lt;em&gt;</h3>
+
+<p><strong>Definicion:</strong> Indica enfasis en el texto.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;em&gt; ... &lt;/em&gt;</p>
+
+<pre>
+&lt;em&gt;Enfasis&lt;/em&gt;
+</pre>
+
+<p><em>Texto con enfasis</em></p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar cuando la palabra cambia el sentido al enfatizarla.</p>
+</article>
+
+<!-- BR -->
+<article>
+<h3>&lt;br&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta un salto de linea.</p>
+
+<p><strong>Tipo:</strong> No tiene etiqueta de cierre.</p>
+
+<pre>
+Linea 1&lt;br&gt;Linea 2
+</pre>
+
+<p>Linea 1<br>Linea 2</p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> No usar multiples br para separar parrafos.</p>
+</article>
+
+<!-- HR -->
+<article>
+<h3>&lt;hr&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta una linea horizontal que separa contenido.</p>
+
+<p><strong>Tipo:</strong> No requiere cierre.</p>
+
+<pre>
+&lt;hr&gt;
+</pre>
+
+<hr>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar para dividir secciones tematicas.</p>
+</article>
+
+</section>
+
+<!-- ================= LISTAS ================= -->
+
+<section id="listas" class="contenido">
+
+<h2>Listas en HTML</h2>
+
+<p>
+Las listas permiten organizar informacion en forma ordenada o desordenada.
+Existen listas no ordenadas, ordenadas y de definicion.
+</p>
+
+<!-- UL -->
+<article>
+<h3>&lt;ul&gt;</h3>
+
+<p><strong>Definicion:</strong> Crea una lista no ordenada (con viñetas).</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;ul&gt; ... &lt;/ul&gt;</p>
+
+<p><strong>Para que sirve:</strong> Mostrar elementos sin orden numerico.</p>
+
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<ul style="border:1px solid gray; padding:10px;">
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+</ul>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Siempre debe contener etiquetas &lt;li&gt;.</p>
+</article>
+
+<!-- OL -->
+<article>
+<h3>&lt;ol&gt;</h3>
+
+<p><strong>Definicion:</strong> Crea una lista ordenada (numerada).</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;ol&gt; ... &lt;/ol&gt;</p>
+
+<pre>
+&lt;ol&gt;
+  &lt;li&gt;Paso 1&lt;/li&gt;
+  &lt;li&gt;Paso 2&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<ol style="border:1px solid gray; padding:10px;">
+  <li>Paso 1</li>
+  <li>Paso 2</li>
+</ol>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar cuando el orden sea importante.</p>
+</article>
+
+<!-- LI -->
+<article>
+<h3>&lt;li&gt;</h3>
+
+<p><strong>Definicion:</strong> Define un elemento dentro de una lista.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;li&gt; ... &lt;/li&gt;</p>
+
+<p><strong>Para que sirve:</strong> Representa cada item individual.</p>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Solo debe usarse dentro de ul u ol.</p>
+</article>
+
+<!-- DL -->
+<article>
+<h3>&lt;dl&gt;</h3>
+
+<p><strong>Definicion:</strong> Lista de definiciones.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;dl&gt; ... &lt;/dl&gt;</p>
+
+<pre>
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje de marcado&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<dl style="border:1px solid gray; padding:10px;">
+  <dt>HTML</dt>
+  <dd>Lenguaje de marcado</dd>
+</dl>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Ideal para glosarios.</p>
+</article>
+
+<!-- DT -->
+<article>
+<h3>&lt;dt&gt;</h3>
+
+<p><strong>Definicion:</strong> Termino dentro de una lista de definicion.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;dt&gt; ... &lt;/dt&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Debe ir dentro de &lt;dl&gt;.</p>
+</article>
+
+<!-- DD -->
+<article>
+<h3>&lt;dd&gt;</h3>
+
+<p><strong>Definicion:</strong> Describe el termino definido en &lt;dt&gt;.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;dd&gt; ... &lt;/dd&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Siempre debe acompañar a un &lt;dt&gt;.</p>
+</article>
+
+</section>
+
+<!-- ================= FORMULARIOS ================= -->
+
+<section id="formularios" class="contenido">
+
+<h2>Formularios en HTML</h2>
+
+<p>
+Los formularios permiten recolectar informacion del usuario.
+Son fundamentales para registros, inicios de sesion, encuestas y envio de datos.
+</p>
+
+<!-- FORM -->
+<article>
+<h3>&lt;form&gt;</h3>
+
+<p><strong>Definicion:</strong> Contenedor principal de un formulario.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;form&gt; ... &lt;/form&gt;</p>
+
+<p><strong>Para que sirve:</strong> Agrupa todos los campos de entrada.</p>
+
+<pre>
+&lt;form action="procesar.php" method="post"&gt;
+   Campos
+&lt;/form&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Siempre definir atributos action y method.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- LABEL -->
+<article>
+<h3>&lt;label&gt;</h3>
+
+<p><strong>Definicion:</strong> Etiqueta descriptiva para un campo.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;label&gt; ... &lt;/label&gt;</p>
+
+<pre>
+&lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Usar atributo for vinculado al id del input.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- INPUT -->
+<article>
+<h3>&lt;input&gt;</h3>
+
+<p><strong>Definicion:</strong> Campo de entrada de datos.</p>
+
+<p><strong>Tipo:</strong> No necesita etiqueta de cierre.</p>
+
+<pre>
+&lt;input type="text"&gt;
+</pre>
+
+<p><strong>Tipos importantes:</strong></p>
+<ul>
+<li>text</li>
+<li>email</li>
+<li>password</li>
+<li>number</li>
+<li>date</li>
+<li>checkbox</li>
+<li>radio</li>
+<li>submit</li>
+</ul>
+
+<p><strong>Buenas practicas:</strong> Usar el tipo adecuado para cada dato.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- TEXTAREA -->
+<article>
+<h3>&lt;textarea&gt;</h3>
+
+<p><strong>Definicion:</strong> Campo de texto multilinea.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;textarea&gt; ... &lt;/textarea&gt;</p>
+
+<pre>
+&lt;textarea rows="4" cols="30"&gt;&lt;/textarea&gt;
+</pre>
+
+<textarea rows="3" cols="30"></textarea>
+
+<p><strong>Buenas practicas:</strong> Usar para mensajes largos.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- SELECT -->
+<article>
+<h3>&lt;select&gt;</h3>
+
+<p><strong>Definicion:</strong> Lista desplegable.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;select&gt; ... &lt;/select&gt;</p>
+
+<pre>
+&lt;select&gt;
+  &lt;option&gt;Opcion 1&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<select>
+  <option>Opcion 1</option>
+  <option>Opcion 2</option>
+</select>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- OPTION -->
+<article>
+<h3>&lt;option&gt;</h3>
+
+<p><strong>Definicion:</strong> Define una opcion dentro de select.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;option&gt; ... &lt;/option&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Puede usar atributo value.</p>
+</article>
+
+<!-- BUTTON -->
+<article>
+<h3>&lt;button&gt;</h3>
+
+<p><strong>Definicion:</strong> Boton interactivo.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;button&gt; ... &lt;/button&gt;</p>
+
+<pre>
+&lt;button&gt;Enviar&lt;/button&gt;
+</pre>
+
+<button>Boton de ejemplo</button>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- FIELDSET -->
+<article>
+<h3>&lt;fieldset&gt;</h3>
+
+<p><strong>Definicion:</strong> Agrupa campos relacionados.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;fieldset&gt; ... &lt;/fieldset&gt;</p>
+
+<pre>
+&lt;fieldset&gt;
+   Campos
+&lt;/fieldset&gt;
+</pre>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- LEGEND -->
+<article>
+<h3>&lt;legend&gt;</h3>
+
+<p><strong>Definicion:</strong> Titulo dentro de fieldset.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;legend&gt; ... &lt;/legend&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Describe el grupo de campos.</p>
+</article>
+
+</section>
+
+<!-- ================= TABLAS ================= -->
+
+<section id="tablas" class="contenido">
+
+<h2>Tablas en HTML</h2>
+
+<p>
+Las tablas permiten organizar informacion en filas y columnas.
+Son utiles para mostrar datos estructurados como horarios, listas de productos o calificaciones.
+</p>
+
+<!-- TABLE -->
+<article>
+<h3>&lt;table&gt;</h3>
+
+<p><strong>Definicion:</strong> Contenedor principal de una tabla.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;table&gt; ... &lt;/table&gt;</p>
+
+<pre>
+&lt;table&gt;
+  Contenido
+&lt;/table&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Usar solo para datos tabulares, no para diseño.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- THEAD -->
+<article>
+<h3>&lt;thead&gt;</h3>
+
+<p><strong>Definicion:</strong> Agrupa el encabezado de la tabla.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;thead&gt; ... &lt;/thead&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Contiene filas con &lt;th&gt;.</p>
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+</article>
+
+<!-- TBODY -->
+<article>
+<h3>&lt;tbody&gt;</h3>
+
+<p><strong>Definicion:</strong> Agrupa el cuerpo principal de la tabla.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;tbody&gt; ... &lt;/tbody&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Contiene filas con datos (&lt;td&gt;).</p>
+</article>
+
+<!-- TR -->
+<article>
+<h3>&lt;tr&gt;</h3>
+
+<p><strong>Definicion:</strong> Define una fila dentro de la tabla.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;tr&gt; ... &lt;/tr&gt;</p>
+
+<p><strong>Buenas practicas:</strong> Puede contener &lt;th&gt; o &lt;td&gt;.</p>
+</article>
+
+<!-- TH -->
+<article>
+<h3>&lt;th&gt;</h3>
+
+<p><strong>Definicion:</strong> Celda de encabezado.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;th&gt; ... &lt;/th&gt;</p>
+
+<pre>
+&lt;th&gt;Nombre&lt;/th&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Se usa dentro de &lt;thead&gt; o primera fila.</p>
+</article>
+
+<!-- TD -->
+<article>
+<h3>&lt;td&gt;</h3>
+
+<p><strong>Definicion:</strong> Celda de datos.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;td&gt; ... &lt;/td&gt;</p>
+
+<pre>
+&lt;td&gt;Juan&lt;/td&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Contiene informacion regular.</p>
+</article>
+
+<!-- EJEMPLO COMPLETO -->
+<article>
+<h3>Ejemplo funcional completo</h3>
+
+<pre>
+&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nombre&lt;/th&gt;
+      &lt;th&gt;Edad&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ana&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ana</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+</article>
+
+</section>
+
+<!-- ================= MULTIMEDIA ================= -->
+
+<section id="multimedia" class="contenido">
+
+<h2>Multimedia en HTML</h2>
+
+<p>
+Las etiquetas multimedia permiten insertar imagenes, audio y video en una pagina web.
+Son fundamentales para contenido visual e interactivo.
+</p>
+
+<!-- IMG -->
+<article>
+<h3>&lt;img&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta una imagen.</p>
+
+<p><strong>Tipo:</strong> No tiene etiqueta de cierre.</p>
+
+<p><strong>Atributos importantes:</strong></p>
+<ul>
+<li>src → Ruta de la imagen</li>
+<li>alt → Texto alternativo</li>
+<li>width / height → Tamaño</li>
+</ul>
+
+<pre>
+&lt;img src="imagen.jpg" alt="Descripcion"&gt;
+</pre>
+
+<img src="https://via.placeholder.com/150" alt="Ejemplo de imagen">
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Siempre incluir atributo alt por accesibilidad.</p>
+</article>
+
+<!-- AUDIO -->
+<article>
+<h3>&lt;audio&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta contenido de audio.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;audio&gt; ... &lt;/audio&gt;</p>
+
+<pre>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</pre>
+
+<audio controls>
+  <source src="">
+</audio>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar atributo controls para mostrar controles.</p>
+</article>
+
+<!-- VIDEO -->
+<article>
+<h3>&lt;video&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta un video.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;video&gt; ... &lt;/video&gt;</p>
+
+<pre>
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</pre>
+
+<video width="250" controls>
+  <source src="">
+</video>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Incluir multiples formatos con source.</p>
+</article>
+
+<!-- SOURCE -->
+<article>
+<h3>&lt;source&gt;</h3>
+
+<p><strong>Definicion:</strong> Define multiples recursos multimedia.</p>
+
+<p><strong>Tipo:</strong> No tiene etiqueta de cierre.</p>
+
+<pre>
+&lt;source src="video.mp4" type="video/mp4"&gt;
+</pre>
+
+<p><strong>Buenas practicas:</strong> Permite compatibilidad entre navegadores.</p>
+</article>
+
+<!-- IFRAME -->
+<article>
+<h3>&lt;iframe&gt;</h3>
+
+<p><strong>Definicion:</strong> Inserta contenido externo dentro de la pagina.</p>
+
+<p><strong>Apertura y cierre:</strong> &lt;iframe&gt; ... &lt;/iframe&gt;</p>
+
+<pre>
+&lt;iframe src="https://www.example.com"&gt;&lt;/iframe&gt;
+</pre>
+
+<iframe src="https://www.example.com" width="300" height="150"></iframe>
+
+<p><strong>Captura visual:</strong> (Agregar imagen aqui)</p>
+
+<p><strong>Buenas practicas:</strong> Usar con fuentes confiables.</p>
+</article>
+
+</section>
+
+</main>
+
+<footer>
+<p>Proyecto Academico - Etiquetas HTML</p>
+</footer>
+
 <script src="script.js"></script>
-
 </body>
 </html>
